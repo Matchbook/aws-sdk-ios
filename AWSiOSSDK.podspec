@@ -22,11 +22,6 @@ Pod::Spec.new do |s|
     ss.source_files = "src/Amazon.Runtime/**/*.m", "src/include", "src/ThirdParty/**/*.m", "src/ThirdParty/**/*.h"
   end
 
-  s.subspec 'DynamoDB' do |ss|
-      ss.source_files = "src/Amazon.DynamoDB/**/*.m", "src/include/DynamoDB"
-      ss.dependency 'AWSiOSSDK/Runtime'
-  end
-
   s.subspec 'S3' do |ss|
        ss.source_files = "src/Amazon.S3/**/*.m", "src/include/S3"
        ss.dependency 'AWSiOSSDK/Runtime'
@@ -35,7 +30,6 @@ Pod::Spec.new do |s|
   s.subspec 'SQS' do |ss|
       ss.source_files = "src/Amazon.SQS/**/*.m", "src/include/SQS"
       ss.dependency 'AWSiOSSDK/Runtime'
-      ss.dependency 'AWSiOSSDK/DynamoDB'
   end
 end
 
