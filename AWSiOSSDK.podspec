@@ -32,12 +32,10 @@ Pod::Spec.new do |s|
        ss.dependency 'AWSiOSSDK/Runtime'
   end
     
-  %w[ AutoScaling CloudWatch EC2 ElasticLoadBalancing SES SNS SQS STS SimpleDB ].each do |name|
-    s.subspec name do |ss|
-      ss.source_files = "src/Amazon.#{name}/**/*.m", "src/include/#{name}"
+  s.subspec 'SQS' do |ss|
+      ss.source_files = "src/Amazon.SQS/**/*.m", "src/include/SQS"
       ss.dependency 'AWSiOSSDK/Runtime'
       ss.dependency 'AWSiOSSDK/DynamoDB'
-    end
   end
 end
 
